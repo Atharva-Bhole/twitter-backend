@@ -1,0 +1,20 @@
+{
+  "name": "twitter-backend",
+  "version": "1.0.0",
+  "description": "- User should be able to post a tweet \r     -- content (250 chars MAX)\r     -- image upload\r     -- likes\r     -- comment tweets",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.4",
+    "nodemon": "^3.1.9"
+  }
+}
