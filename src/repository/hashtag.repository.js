@@ -1,16 +1,8 @@
 import HashTag from "../models/hashTag.model.js"
-
-class HashTagRepository{
-    async create(data)
-    {
-        try{
-            let hashTag = await HashTag.create(data);
-            return hashTag
-        }catch(error)
-        {
-            console.log(`Error creating hash tag ${error}`);
-            throw error;
-        }
+import CrudRepository from "./crud.repository.js";
+class HashTagRepository extends CrudRepository{
+    constructor() {
+        super(HashTag);
     }
 
     async getAllHashTags()

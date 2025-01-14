@@ -1,16 +1,8 @@
 import Tweet from "../models/tweet.model.js";
-
-class TweetRepository{
-    async create(data)
-    {
-        try{
-            let tweet = await Tweet.create(data);
-            return tweet;
-        }catch(error)
-        {
-            console.log(`Error creating tweet ${error}`);
-            throw error;
-        }
+import CrudRepository from "./crud.repository.js";
+class TweetRepository extends CrudRepository{
+    constructor(){
+        super(Tweet);
     }
 
     async getAllTweets()
